@@ -35,14 +35,14 @@ the server uses the HTTP/HTTPS protocol to commnicate with the user based on the
 
 <p align="center"><strong>infrastructure's issues</strong></p>
 
-1. SPOF(Single Point of Failure)
+1. <b>SPOF(Single Point of Failure)</b>
 
 The infrastructure relies on a single server, which means it has a single point of failure. is something is down the entire website/application will become inaccessible.
  
-2. Downtime when maintenance needed
+2. <b>Downtime when maintenance needed</b>
 
 any maintenance or updates that require restarting the web server will result in downtime for the website.
 
-3. Cannot scale if too much incoming traffic
+3. <b>Cannot scale if too much incoming traffic</b>
 
 If the website experiences high traffic or if the traffic, the single server won't handle it well which will make it slow or crash.
