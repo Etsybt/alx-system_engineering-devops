@@ -1,6 +1,6 @@
 <p align="center"><strong>Up scaled web infrastructure</strong></p>
 
-![attached image](3-scale_up.jpg)
+![attached image](3-scale_up2.jpg)
 
 <p align="center"><strong>Infrastructure specifics</strong></p>
 
