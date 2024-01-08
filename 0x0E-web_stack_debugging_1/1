@@ -1,0 +1,35 @@
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3021 kB]
+Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [2570 kB]
+Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [359 kB]
+Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1143 kB]
+Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [26.1 kB]
+Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7768 B]
+Fetched 7240 kB in 3s (2857 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.18.0-0ubuntu1.4).
+0 upgraded, 0 newly installed, 0 to remove and 71 not upgraded.
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2024-01-08 20:15:07 UTC; 2h 48min ago
+       Docs: man:nginx(8)
+    Process: 98159 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 98160 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 98161 (nginx)
+      Tasks: 2 (limit: 1143)
+     Memory: 2.4M
+     CGroup: /system.slice/nginx.service
+             ├─98161 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+             └─98162 nginx: worker process
+
+Jan 08 20:15:07 431278-web-01 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Jan 08 20:15:07 431278-web-01 systemd[1]: Started A high performance web server and a reverse proxy server.
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+sudo: netstat: command not found
