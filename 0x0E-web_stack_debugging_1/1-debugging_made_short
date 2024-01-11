@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 #shorter code
-
-service nginx status | grep -q "not running" && service nginx start
-curl 0:80
+sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
+pkill -f --signal 1 "/usr/sbin/nginx"
