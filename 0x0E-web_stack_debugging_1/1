@@ -1,35 +1,32 @@
-Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
-Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
-Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease
-Hit:4 http://security.ubuntu.com/ubuntu focal-security InRelease
-Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3021 kB]
-Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [2570 kB]
-Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [359 kB]
-Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1143 kB]
-Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [26.1 kB]
-Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7768 B]
-Fetched 7240 kB in 3s (2857 kB/s)
+Hit:1 http://ppa.launchpad.net/vbernat/haproxy-1.7/ubuntu bionic InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu bionic InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu bionic-backports InRelease
+Hit:5 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Get:6 https://download.docker.com/linux/ubuntu bionic InRelease [64.4 kB]
+Fetched 64.4 kB in 5s (13.9 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
 Reading state information...
-nginx is already the newest version (1.18.0-0ubuntu1.4).
-0 upgraded, 0 newly installed, 0 to remove and 71 not upgraded.
+nginx is already the newest version (1.14.0-0ubuntu1.11).
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
 ● nginx.service - A high performance web server and a reverse proxy server
-     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
-     Active: active (running) since Mon 2024-01-08 20:15:07 UTC; 2h 48min ago
-       Docs: man:nginx(8)
-    Process: 98159 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
-    Process: 98160 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
-   Main PID: 98161 (nginx)
-      Tasks: 2 (limit: 1143)
-     Memory: 2.4M
-     CGroup: /system.slice/nginx.service
-             ├─98161 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
-             └─98162 nginx: worker process
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Thu 2024-01-11 15:50:29 UTC; 3min 9s ago
+     Docs: man:nginx(8)
+  Process: 23077 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited, status=0/SUCCESS)
+  Process: 22984 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+  Process: 25937 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+ Main PID: 22989 (code=exited, status=0/SUCCESS)
 
-Jan 08 20:15:07 431278-web-01 systemd[1]: Starting A high performance web server and a reverse proxy server...
-Jan 08 20:15:07 431278-web-01 systemd[1]: Started A high performance web server and a reverse proxy server.
+Jan 11 15:50:29 ubuntu-bionic systemd[1]: Starting A high performance web server and a reverse proxy server...
+Jan 11 15:50:29 ubuntu-bionic nginx[25937]: nginx: [emerg] duplicate location "/redirect_me" in /etc/nginx/sites-enabled/default:17
+Jan 11 15:50:29 ubuntu-bionic nginx[25937]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Jan 11 15:50:29 ubuntu-bionic systemd[1]: nginx.service: Control process exited, code=exited status=1
+Jan 11 15:50:29 ubuntu-bionic systemd[1]: nginx.service: Failed with result 'exit-code'.
+Jan 11 15:50:29 ubuntu-bionic systemd[1]: Failed to start A high performance web server and a reverse proxy server.
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
-sudo: netstat: command not found
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN     
+tcp6       0      0 :::80                   :::*                    LISTEN     
