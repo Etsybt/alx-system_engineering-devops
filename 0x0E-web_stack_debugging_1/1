@@ -1,0 +1,15 @@
+Hit:1 http://archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Hit:3 http://ppa.launchpad.net/vbernat/haproxy-1.7/ubuntu bionic InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease
+Get:6 https://download.docker.com/linux/ubuntu bionic InRelease [64.4 kB]
+Fetched 64.4 kB in 2s (30.2 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.58.0-2ubuntu3.24).
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+rm: cannot remove '/etc/nginx/sites-available/*': No such file or directory
+rm: cannot remove '/etc/nginx/sites-enabled/*~': No such file or directory
