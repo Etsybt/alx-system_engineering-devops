@@ -19,7 +19,7 @@ if __name__ == "__main__":
     # Iterate over each user
     for user in users_data:
         task_list = []
-        
+
         # Iterate over each task
         for task in todos_data:
             # Check if the task belongs to the current user
@@ -28,7 +28,7 @@ if __name__ == "__main__":
                              "task": task.get('title'),
                              "completed": task.get('completed')}
                 task_list.append(task_dict)
-        
+
         # Add user's tasks to the dictionary
         all_tasks[user.get('id')] = task_list
 
