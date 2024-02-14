@@ -1,24 +1,21 @@
 #!/usr/bin/python3
 """
-Queries the Reddit API
+api request
 """
 import requests
 
 
 def number_of_subscribers(subreddit):
-    """
-    Queries the Reddit API
+    """Queries the Reddit API"""
 
-    Args:
-    subreddit: The name of the subreddit
-    """
-    url = 'http://www.reddit.com/r/{}/about.json'.format(subreddit)
+    url = f"https://www.reddit.com/r/{subreddit}/about.json"
     headers = {"User-Agent": "My-User-Agent"}
-    response = requests.get(url, headers=headers)
-    if response.status_code == 200:
-        data = response.json()
-        subscribers = data['data']['subscribers']
-        return subscribers
-    else:
-        return 0
 
+    try:
+        response = requests.get(url, headers=headers, allow_redirects=False)
+        response.raise_for_status()
+        data = response.json()
+        subscribers = data.get("data").get("subscribers")
+        return subscribers
+    except requests.exceptions.RequestException:
+        return 0
