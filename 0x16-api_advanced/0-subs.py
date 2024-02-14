@@ -10,7 +10,7 @@ def number_of_subscribers(subreddit):
     Queries the Reddit API
 
     Args:
-    - subreddit: The name of the subreddit
+    subreddit: The name of the subreddit
     """
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     headers = {"User-Agent": "MyBot/1.0"}
